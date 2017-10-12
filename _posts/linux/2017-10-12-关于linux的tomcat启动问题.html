@@ -1,0 +1,23 @@
+﻿<h2><a href="https://tungchi.github.io/gitblog/">返回首页</a></h2>
+<h2>{{ page.title }}</h2>
+<p> 
+	<ul>
+		<li>
+		"Timer-9" #37 daemon prio=5 os_prio=0 tid=0x00007fb63c7f1000 nid=0x7f15 in Object.wait() [0x00007fb60bbfa000]
+		   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+			at java.lang.Object.wait(Native Method)
+			- waiting on <0x00000000c724da70> (a java.util.TaskQueue)
+			at java.util.TimerThread.mainLoop(Timer.java:552)
+			- locked <0x00000000c724da70> (a java.util.TaskQueue)
+			at java.util.TimerThread.run(Timer.java:505)
+		</li>
+		<li>
+			nid就是linux里的线程的pid,不过要十六进制转化为十进制
+		</li>
+	</ul>
+	<ul>
+		<li>还是以byte a=127为例子,a>>1,即00111111,转化为正数,+63</li>
+	</ul>
+</p>
+
+<p>{{ page.date | date_to_string }}</p>
