@@ -42,6 +42,30 @@
 			F(n) = 2^n - 2^0,<br/>
 			则F(n) = 2^n -1 ;<br/>
 		</li>
+		<li>java 缩略代码如下:</li>
+		<li>
+			static int move_times = 0;<br/>
+			public static void main(String[] args) {<br/>
+				int number =4;<br/>
+				String src = "a";<br/>
+				String dst = "c";<br/>
+				String temp = "b";<br/>
+				move(src, dst, temp, number);<br/>
+				System.out.println("总共搬了"+move_times+"次");<br/>
+			}<br/>
+			
+			public static void move(String src,String dst,String temp,int number){<br/>
+				if(number==1){<br/>
+					move_times = move_times+1;<br/>
+					System.out.println("move "+src+" ."+number+" to "+dst);<br/>
+				}else{<br/>
+					move(src, temp, dst, number-1);<br/>
+					move_times = move_times+1;<br/>
+					System.out.println("move "+src+" ."+number+" to "+dst);<br/>
+					move(temp, dst, src, number-1);<br/>
+				}<br/>
+			}<br/>
+		</li>
 	</ul>
 </p>
 <p>{{ page.date | date_to_string }}</p>
