@@ -12,6 +12,17 @@
 		我最初的设置是.;C:\Program Files\Java\jdk1.8.0_66\lib;C:\Program Files\Java\jdk1.8.0_66\lib\tools.jar;;%CATALINA_HOME%\bin;(这是修改后的,修改前用的%JAVA_HOME%)<br/>
 		还是不行,后来把关于java的都删掉只保留cata那个还是不行,最后检查了一下,我根本没有设置cata的路径,最后只是把cata的删掉,其他还原到第一版,成功解决了.<br/>
 		</li>
+		<br/>
+		<li>错误2:e2_4.java<br/>
+正在加载源文件Exercise2_4.java...<br/>
+Exercise2_4.java:7: 错误: 编码GBK的不可映射字符<br/>
+ * 娴嬭瘯绫?,thinking In java 4th chapter2-4缁冧範<br/>
+       ^<br/>
+Exercise2_4.java:12: 错误: 编码GBK的不可映射字符<br/>
+     * @param args 鑷畾涔夊彉閲忓垪琛?<br/></li>
+	 <li>原因:编码问题,<br/>
+	 解决方法,添加参数,D:\SVN\trunk\hsshop-web\src\test\java\com\exercise\main\chapter2>javadoc -encoding UTF-8 Exercise2_4.java<br/>
+	 </li>
 	</ul>
 </p>
 
