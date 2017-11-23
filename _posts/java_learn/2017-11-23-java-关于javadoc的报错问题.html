@@ -1,0 +1,18 @@
+﻿<h2><a href="https://tungchi.github.io/blog/">返回首页</a></h2>
+<h2>{{ page.title }}</h2>
+<p> 
+	<ul>
+		<li>javadoc生成文档时java.lang.IllegalArgumentException问题解决</li>
+		<li>问题:java.lang.IllegalArgumentException: Error decoding percent encoded characters<br/>
+        at sun.net.www.ParseUtil.decode(ParseUtil.java:216)<br/>
+        at sun.misc.URLClassPath$FileLoader.<init>(URLClassPath.java:1204)<br/>
+        at sun.misc.URLClassPath$3.run(URLClassPath.java:525)<br/>
+        at sun.misc.URLClassPath$3.run(URLClassPath.java:520)<br/></li>
+		<li>原因:应该是classpath里的路径设置错误,</br>
+		我最初的设置是.;C:\Program Files\Java\jdk1.8.0_66\lib;C:\Program Files\Java\jdk1.8.0_66\lib\tools.jar;;%CATALINA_HOME%\bin;(这是修改后的,修改前用的%JAVA_HOME%)<br/>
+		还是不行,后来把关于java的都删掉只保留cata那个还是不行,最后检查了一下,我根本没有设置cata的路径,最后只是把cata的删掉,其他还原到第一版,成功解决了.<br/>
+		</li>
+	</ul>
+</p>
+
+<p>{{ page.date | date_to_string }}</p>
